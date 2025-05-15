@@ -13,12 +13,6 @@
   --font-kanit: var(--font-kanit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
@@ -70,6 +64,10 @@ li {
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
+}
+
+.nav_container nav ul li a:hover {
+    color: #F0EADD;
 }
 
 .footer_container{
@@ -152,4 +150,66 @@ li {
     color: #281525;
     text-decoration: none;
     transition: all 0.3s ease;
+}
+.card_button:hover{
+    background-color: #281525;
+    color: #F0EADD;
+}
+
+@media (max-width: 768px) {
+    h2{
+        font-size: 32px;
+    }
+
+    h3{
+        font-size: 28px;
+    }
+
+    h4, li{
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .recetas_boxed{
+        max-width: 600px;
+    }
+
+    .recipes_grid{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .recipe_main{
+        margin: 0;
+    }
+
+    .recipe_card{
+        flex-direction: column;
+    }
+
+    .img_cont{
+        width: 100%;
+        height: 100%;
+    }
+
+    .recipe_content{
+        width: 100%;
+    }
+
+    .recipe_title{
+        margin: 20px 0;
+    }
+
+    .boxes{
+        padding: 20px 30px;
+    }
+    .ingre-inst{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .recipe_ingredients, .recipe_instructions{
+        width: auto;
+        max-width: 587px;
+    }
+
 }
