@@ -1,6 +1,6 @@
 const CardButton = () => {
   return (
-    <div>
+    <div className="card_button">
         <a href="#">Ver más</a>
     </div>
   )

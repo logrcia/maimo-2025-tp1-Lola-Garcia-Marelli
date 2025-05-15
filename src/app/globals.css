@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #F0EADD;;
   --foreground: #171717;
 }
 
@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-kanit: var(--font-kanit);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,17 +23,46 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-kanit);
 }
+
+h1, h2, .bold_text {
+    font-weight: 600;
+}
+
+h3, h4, li, a {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 45px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 35px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4, li {
+    font-size: 20px;
+}
+
+li {
+    line-height: 30px;
+}
+
 
 .nav_container{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ededed;
-  color: #171717;
-  height: 50px;
-  padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #a7c0a2;
 }
 
 .nav_container ul{
@@ -43,12 +73,13 @@ body {
 }
 
 .footer_container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  height: 50px;
-  background-color: antiquewhite;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #a7c0a2;
+    margin-top: 30px;
+    width: 100%; 
 }
 
 /*
@@ -57,18 +88,68 @@ body {
 }
 */
 
+.hero_container{
+  height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url('/assets/food.jpg');;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero_container h1{
+  color: #F0EADD;
+  font-size: 56px;
+  text-shadow: 2px 2px 4px rgba(0, .0, 0, 0.5);
+  text-align: center;
+}
+
+.recetas_boxed{
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+.recetas_boxed h2{
+  margin: 20px 0;
+}
+
 .recipes_grid{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 20px;
 }
 
 .recipe_card{
-  grid-column: span 4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  
+    grid-column: span 3;
+    background-color: #F0EADD;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #281525;
+
+}
+
+.recipe_card h3{
+  margin: 20px 0;
+}
+
+.image_card {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #281525;
+}
+
+.card_button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #281525;
+    color: #281525;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
