@@ -57,8 +57,8 @@ const RecipeContainer = ({id}) => {
         <div className="img_cont">
             <Image 
             src={recipe.image}
-            width={450}
-            height={450}
+            width={600}
+            height={600}
             alt={recipe.name || "Recipe image"}
             className="image"
             />
