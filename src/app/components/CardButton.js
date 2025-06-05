@@ -1,7 +1,9 @@
-const CardButton = () => {
+import Link from "next/link";
+
+const CardButton = ({id}) => {
   return (
     <div className="card_button">
-        <a href="#">Ver más</a>
+        <Link href={`/recipe/${id}`}>Ver más</Link>
     </div>
   )
 }
